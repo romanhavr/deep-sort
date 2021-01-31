@@ -36,6 +36,7 @@ And we have next structure of our objects (pupil1, pupil2, pupil3, ...):
 }
 ```
 *String* sorting criteria is a path in pupil object to the primitive that must be compared for sorting. *String* criteria must begin with **"."** (period) or **"["** (opening square bracket).
+
 If we want to sort pupils by name we should write next `'.name.firstName'`.
 And our `arrayOfSortingCriteria` would look like next `arrayOfSortingCriteria = ['.name.firstName']`.
 
@@ -46,9 +47,10 @@ const historyMarksNumber = (pupil) => pupil.marks.history.length;
 ```
 and `arrayOfSortingCriteria = [historyMarksNumber]`.
 
-What is the purpose of **DEEP** sorting?
+### What is the purpose of **DEEP** sorting?
 
 According to examples above we can combine those sorting methods.
+
 If we pass next `arrayOfSortingCriteria = ['.name.firstName', historyMarksNumber]` we can have such result as
 
 | Name | History marks number |
@@ -62,6 +64,7 @@ If we pass next `arrayOfSortingCriteria = ['.name.firstName', historyMarksNumber
 Here we have three pupils with name *Adam* and they are sorted by "History marks number" as well.
 
 *Order of criteria in array is important for sorting order!*
+
 For replaced criteria `arrayOfSortingCriteria = [historyMarksNumber, '.name.firstName']` result is
 
 | Name | History marks number |
@@ -80,7 +83,7 @@ The object (pupil) can be of any level of complexity combining objects and array
 
 Few more examples for *string* criteria:
 ```
-'.marks.arts[2]'` - to sort pupils by "second mark of Arts".
+'.marks.arts[2]' - to sort pupils by "second mark of Arts".
 
 `.marks[${subject}][2]` - to sort pupils by second mark of a "subject" passed as variable.
 ```
