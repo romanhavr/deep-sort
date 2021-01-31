@@ -1,0 +1,25 @@
+{
+  "name": "deep-sorting",
+  "version": "1.0.0",
+  "description": "Sorting function for arrays of objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanhavr/deep-sort.git"
+  },
+  "keywords": [
+    "sort",
+    "sorting",
+    "deep",
+    "object"
+  ],
+  "author": "romanhavr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/romanhavr/deep-sort/issues"
+  },
+  "homepage": "https://github.com/romanhavr/deep-sort#readme"
+}
