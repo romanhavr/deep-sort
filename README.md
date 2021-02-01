@@ -5,13 +5,13 @@ Sorting function for arrays of objects.
 ### install
 
 ```
-npm install deep-sorting
+npm install @romanhavryliv/deep-sorting
 ```
 
 ### usage
 
 ```
-import deepSorting from 'deep-sorting';
+import deepSorting from '@romanhavryliv/deep-sorting';
 ...
 
 deepSorting(arrayToSort, arrayOfSortingCriteria)
