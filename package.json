@@ -2,6 +2,9 @@
   "name": "@romanhavryliv/deep-sorting",
   "version": "1.0.0",
   "description": "Sorting function for arrays of objects.",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\""
