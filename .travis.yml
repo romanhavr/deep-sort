@@ -1,0 +1,12 @@
+  
+language: node_js
+node_js:
+  - 'stable'
+
+deploy:
+  provider: npm
+  email: $npmuser
+  api_key: $npmtoken
+  skip_cleanup: true
+  on:
+    branch: main
