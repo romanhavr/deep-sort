@@ -1,6 +1,6 @@
 {
   "name": "@romanhavryliv/deep-sorting",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Sorting function for arrays of objects.",
   "publishConfig": {
     "access": "public"

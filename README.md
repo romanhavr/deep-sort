@@ -83,9 +83,9 @@ The object (pupil) can be of any level of complexity combining objects and array
 
 Few more examples for *string* criteria:
 ```
-'.marks.arts[2]' - to sort pupils by "second mark of Arts".
+'.marks.arts[1]' - to sort pupils by "second mark of Arts".
 
-`.marks[${subject}][2]` - to sort pupils by second mark of a "subject" passed as variable.
+`.marks[${subject}][1]` - to sort pupils by second mark of a "subject" passed as variable.
 ```
 
 *Function* complexity depends only on your needs.
