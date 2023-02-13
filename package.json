@@ -1,13 +1,17 @@
 {
   "name": "@romanhavryliv/deep-sorting",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Sorting function for arrays of objects.",
   "publishConfig": {
     "access": "public"
   },
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist/*"],
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build" : "tsc && esbuild dist/index.js --minify --outfile=dist/index.min.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +28,12 @@
   "bugs": {
     "url": "https://github.com/romanhavr/deep-sort/issues"
   },
-  "homepage": "https://github.com/romanhavr/deep-sort#readme"
+  "homepage": "https://github.com/romanhavr/deep-sort#readme",
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.2",
+    "jest-cli": "^29.4.2",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.5"
+  }
 }

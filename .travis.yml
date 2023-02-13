@@ -1,12 +1,19 @@
-  
 language: node_js
 node_js:
-  - 'stable'
+  - "stable"
 
-deploy:
-  provider: npm
-  email: $npmuser
-  api_key: $npmtoken
-  skip_cleanup: true
-  on:
-    branch: main
+jobs:
+  include:
+    - stage: test
+      name: "Unit Tests"
+      script: "npm run test"
+    - stage: deploy
+      script: "npm run build"
+      name: "Deploy to NPM"
+      deploy:
+        provider: npm
+        email: $npmuser
+        api_key: $npmtoken
+        cleanup: true
+        on:
+          branch: main
