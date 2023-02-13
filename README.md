@@ -18,7 +18,7 @@ deepSorting(arrayToSort, arrayOfSortingCriteria)
 ```
 
 - `arrayToSort` - an array that needs to be sorted (is sorted **in place**).
-- `arrayOfSortingCriteria` - an array of sorting criteria. Criteria can be a **string**, a **function** or an **array** of two elements where the first one is criteria itself (a **string** or a **function**) and the second one is **descendic pointer**. This "descendic pointer" points to sort the array by this particular criteria using descendic order. "Descendic pointer should be only **"desc"** string. Any other value is ignored.
+- `arrayOfSortingCriteria` - an array of sorting criteria. Criteria can be a **string**, a **function** or an **array** of two elements where the first one is criteria itself (a **string** or a **function**) and the second one is **descendic pointer**. This "descendic pointer" points to sort the array by this particular criteria using descendic order. "Descendic" pointer should be only **"desc"** string. Any other value is ignored.
   The _order_ of criteria in array is important for sorting order.
 
 ### examples
@@ -58,7 +58,7 @@ If we want to sort pupils by number of marks in History we should create next fu
 const historyMarksNumber = (pupil) => pupil.marks.history.length;
 ```
 
-Or with descendic order:
+_or with descendic order:_
 
 ```
 const historyMarksNumber = (pupil) => [pupil.marks.history.length, 'desc'];
