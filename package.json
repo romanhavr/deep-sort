@@ -5,7 +5,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.min.js",
   "types": "./dist/index.d.ts",
   "files": ["dist/*"],
   "scripts": {
