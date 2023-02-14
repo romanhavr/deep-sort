@@ -48,8 +48,10 @@ Also it can start with **"["** (opening square bracket)
 ```
 
 If we want to sort pupils by name we should write next `'.name.firstName'`.
-And our `arrayOfSortingCriteria` would look like next `arrayOfSortingCriteria = ['.name.firstName']`.
-Or with descendic order: `arrayOfSortingCriteria = [['.name.firstName', 'desc']]`.
+And our `arrayOfSortingCriteria` would look like next
+`arrayOfSortingCriteria = ['.name.firstName']`.
+Or with descendic order:
+`arrayOfSortingCriteria = [['.name.firstName', 'desc']]`.
 
 _Function_ sorting criteria is a function that return some primitive that can be compared for sorting.
 If we want to sort pupils by number of marks in History we should create next function
@@ -70,7 +72,8 @@ and `arrayOfSortingCriteria = [historyMarksNumber]`.
 
 According to examples above we can combine those sorting methods.
 
-If we pass next `arrayOfSortingCriteria = ['.name.firstName', historyMarksNumber]` we can have such result as
+If we pass next
+`arrayOfSortingCriteria = ['.name.firstName', historyMarksNumber]` we can have such result as
 
 | Name | History marks number |
 | ---- | -------------------- |
@@ -84,7 +87,8 @@ Here we have three pupils with name _Adam_ and they are sorted by "History marks
 
 _Order of criteria in array is important for sorting order!_
 
-For replaced criteria `arrayOfSortingCriteria = [historyMarksNumber, '.name.firstName']` result is
+For replaced criteria
+`arrayOfSortingCriteria = [historyMarksNumber, '.name.firstName']` result is
 
 | Name | History marks number |
 | ---- | -------------------- |
@@ -96,7 +100,8 @@ For replaced criteria `arrayOfSortingCriteria = [historyMarksNumber, '.name.firs
 
 Now we have two pupils with "History marks number" of "8" and two of "7" and they are sorted by "firstName" as well (_inside_ of mark "8" and "7").
 
-Let's see the second table with _descendic_ order for the second criteria `arrayOfSortingCriteria = [historyMarksNumber, ['.name.firstName', 'desc']]`:
+Let's see the second table with _descendic_ order for the second criteria
+`arrayOfSortingCriteria = [historyMarksNumber, ['.name.firstName', 'desc']]`:
 
 | Name | History marks number |
 | ---- | -------------------- |
@@ -127,7 +132,7 @@ The only thing it must do - _return a primitive_ for sorting comparison.
 
 If an _empty array_ is passed as `arrayOfSortingCriteria` then regular sorting is applied (it doesn't change anything in array of objects).
 
-### Change log (to v 1.1.0)
+### Change log (to v 1.1.x)
 
 - fixed leading period issue
 - added descentic order of sorting
