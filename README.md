@@ -10,6 +10,8 @@ npm install @romanhavryliv/deep-sorting
 
 ### usage
 
+As main function is a default export from package use default import in you project also (giving it any name you like):
+
 ```
 import deepSorting from '@romanhavryliv/deep-sorting';
 ...

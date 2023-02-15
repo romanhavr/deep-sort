@@ -10,7 +10,7 @@ type SortingCriteriaReturnType = {
     newObj2: any,
 };
 
-export default function deepSorting(sortingArray: any[], criteriaArray: SortingCriteriaType[] = []): void {
+export default function deepSorting<T>(sortingArray: T[], criteriaArray: SortingCriteriaType[] = []): void {
     if (!criteriaArray.length) {
         sortingArray.sort();
         return
@@ -18,7 +18,7 @@ export default function deepSorting(sortingArray: any[], criteriaArray: SortingC
     sortingArray.sort((a,b) => sortingFunc(a, b, criteriaArray))
 }
 
-function sortingFunc(a: any, b: any, criteriaArray: SortingCriteriaType[], i: number = 0): number {
+function sortingFunc<T>(a: T, b: T, criteriaArray: SortingCriteriaType[], i: number = 0): number {
     if (comparing(a, b, criteriaArray[i], 'more')) {
         return 1
     } else if (comparing(a, b, criteriaArray[i], 'less')) {
@@ -29,7 +29,7 @@ function sortingFunc(a: any, b: any, criteriaArray: SortingCriteriaType[], i: nu
         return 0
 };
 
-function comparing(a: any, b: any, criteriaItem: SortingCriteriaType, compareIndex: string): boolean {
+function comparing<T>(a: T, b: T, criteriaItem: SortingCriteriaType, compareIndex: string): boolean {
     const { newObj1, newObj2 } = sortingCriteria(a, b, criteriaItem)
     switch (compareIndex) {
         case 'more':
@@ -43,7 +43,7 @@ function comparing(a: any, b: any, criteriaItem: SortingCriteriaType, compareInd
     }
 }
 
-function sortingCriteria(a: any, b: any, criteriaItem: SortingCriteriaType = null): SortingCriteriaReturnType {
+function sortingCriteria<T>(a: T, b: T, criteriaItem: SortingCriteriaType = null): SortingCriteriaReturnType {
     let newObj1: any;
     let newObj2: any;
     let returnObject: SortingCriteriaReturnType;
